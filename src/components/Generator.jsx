@@ -46,9 +46,11 @@ export default function Generator(props) {
         if (muscles.length === 2) {
             setShowModal(false)
         }
+
     }
+
     return (
-        <SectionWrapper id={'generate'} header={"generate your workout"} title={['It\'s','Never','To Late']}>
+        <SectionWrapper id={'generate'} header={"generate your workout"} title={['It\'s', 'Huge', 'o\'clock']}>
             <Header index={'01'} title={'Pick your poison'} description={"Select the workout you wish to endure."} />
             <div className='grid grid-cols-2 sm:grid-cols-4 gap-4'>
                 {Object.keys(WORKOUTS).map((type, typeIndex) => {
@@ -82,7 +84,7 @@ export default function Generator(props) {
                     </div>
                 )}
             </div>
-            <Header index={'03'} title={'Become Juggernaut'} description={"Select your objective."} />
+            <Header index={'03'} title={'Become Juggernaut'} description={"Select your ultimate objective."} />
             <div className='grid grid-cols-1 sm:grid-cols-3 gap-4'>
                 {Object.keys(SCHEMES).map((scheme, schemeIndex) => {
                     return (

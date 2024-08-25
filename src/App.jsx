@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Hero from './components/Hero';
 import Generator from './components/Generator';
 import Workout from './components/Workout';
@@ -7,6 +7,7 @@ import { search } from './assets/images';
 import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { ToastContainer, toast } from 'react-toastify';
 import { auth } from './firebase.config.js'; // Import the auth instance from your config file
+import { generateWorkout } from './utils/functions';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -23,10 +24,10 @@ function App() {
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
       setUser(user); // Update the state with user info
-      // toast.success('Successfully Signed In');
+      toast.success('Successfully Signed In');
     } catch (error) {
       console.error('Error signing in:', error);
-      // toast.error('Sign In Failed');
+      toast.error('Sign In Failed');
     }
   };
 
@@ -41,18 +42,14 @@ function App() {
 
   return (
     <main className='min-h-screen flex flex-col bg-gradient-to-r from-slate-800 to-slate-950 text-white text-sm sm:text-base relative'>
-    <div className='flex flex-col sm:flex-row items-center justify-between p-4 absolute top-0 inset-x-0'>
+      <div className='flex flex-col sm:flex-row items-center justify-between p-4 absolute top-0 inset-x-0'>
         {/* Sign-in Button */}
         {!user && (
           <div
             onClick={handleLogin}
             className="text-base w-full sm:w-52 md:w-60 h-12 tracking-wide border-[1px] border-gray-600 rounded-md flex items-center gap-2 hover:border-blue-600 cursor-pointer duration-300 justify-center mb-4 sm:mb-0"
           >
-            <img
-              className="w-6"
-              src={search}
-              alt="Google Logo"
-            />
+            <img className="w-6" src={search} alt="Google Logo" />
             <p className="text-md text-white">Sign in with Google</p>
           </div>
         )}
@@ -92,7 +89,7 @@ function App() {
         draggable
         pauseOnHover
         theme="dark"
-       />
+      />
     </main>
   );
 }
