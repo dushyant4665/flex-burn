@@ -4,7 +4,8 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 
 const FooterDetails = () => {
   return (
-    <footer className="bg-gray-800 text-white py-6 mt-80">
+    <div>
+    <footer className="bg-black text-white py-6 mt-80">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Logo and Brand */}
@@ -49,7 +50,14 @@ const FooterDetails = () => {
           <p>&copy; {new Date().getFullYear()} Dushyant Khandelwal. All rights reserved.</p>
         </div>
        </div>
+   
     </footer>
+    <div className="w-full bg-gray-900 p-4 flex justify-center md:justify-end items-center">
+  <p className="text-sm text-white text-center md:text-right">
+    Technologies: React.js, TailwindCSS, Firebase Auth
+  </p>
+</div>
+    </div>
   );
 };
 
