@@ -106,10 +106,10 @@ export function generateWorkout(args) {
                 ) +
                 (setType === "accessory" ? 4 : 0)
                 : Math.floor(Math.random() * 40) + 20;
-        const tempo = TEMPOS[Math.floor(Math.random() * TEMPOS.length)];
+        const Pulse = TEMPOS[Math.floor(Math.random() * TEMPOS.length)];
 
         if (exercises[randomExercise].unit === "reps") {
-            const tempoSum = tempo
+            const tempoSum = Pulse
                 .split(" ")
                 .reduce((acc, curr) => acc + parseInt(curr), 0);
             if (tempoSum * parseInt(repsOrDuraction) > 85) {
@@ -123,7 +123,7 @@ export function generateWorkout(args) {
 
         return {
             name: randomExercise,
-            tempo,
+            Pulse,
             rest: SCHEMES[scheme]["rest"][setType === "compound" ? 0 : 1],
             reps: repsOrDuraction,
             ...exercises[randomExercise],

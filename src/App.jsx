@@ -24,10 +24,10 @@ function App() {
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
       setUser(user); // Update the state with user info
-      toast.success('Successfully Signed In');
+      // toast.success('Successfully Signed In');
     } catch (error) {
       console.error('Error signing in:', error);
-      toast.error('Sign In Failed');
+      // toast.error('Sign In Failed');
     }
   };
 
@@ -41,7 +41,7 @@ function App() {
   }
 
   return (
-    <main className='min-h-screen flex flex-col bg-gradient-to-r from-slate-800 to-slate-950 text-white text-sm sm:text-base relative'>
+    <main className='min-h-screen flex flex-col bg-gradient-to-r from-gray-900 to-gray-950 text-white text-sm sm:text-base relative'>
       <div className='flex flex-col sm:flex-row items-center justify-between p-4 absolute top-0 inset-x-0'>
         {/* Sign-in Button */}
         {!user && (

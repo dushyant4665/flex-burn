@@ -1092,10 +1092,10 @@ export const EXERCISES = {
         description: 'With you knees locked into place, try to pull your heels back as far as you can towards your bum.',
         substitutes: ['dumbbell rdls', 'seated hamstring curl']
     },
-    tbar_rdls: {
+    monkey_punch: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'Workout',
             level: [0, 1, 2],
             equipment: ['barbell']
         },
@@ -1119,7 +1119,7 @@ export const EXERCISES = {
     lying_dumbbell_hamstring_curls: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: ['dumbbell']
         },
@@ -1131,7 +1131,7 @@ export const EXERCISES = {
     cable_leg_adduction: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: ['bands']
         },
@@ -1143,7 +1143,7 @@ export const EXERCISES = {
     cable_kickbacks: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: ['bands']
         },
@@ -1155,7 +1155,7 @@ export const EXERCISES = {
     hip_thrusts: {
         type: 'compound',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: []
         },
@@ -1167,7 +1167,7 @@ export const EXERCISES = {
     unilateral_hip_thrusts: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: []
         },
@@ -1179,7 +1179,7 @@ export const EXERCISES = {
     deadlift: {
         type: 'compound',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: []
         },
@@ -1191,7 +1191,7 @@ export const EXERCISES = {
     donkey_kicks: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: []
         },
@@ -1200,7 +1200,7 @@ export const EXERCISES = {
         description: 'You\'re a donkey, on your four limbs. Your owner is particularly annoying, standing directly behind you. With one leg, kick backwards and up as much as you can to teach them a lesson.',
         substitutes: ['cable kickbacks']
     },
-    good_girls: {
+    weak_past: {
         type: 'accessory',
         meta: {
             environment: 'gym',
@@ -1224,7 +1224,7 @@ export const EXERCISES = {
         description: 'As if your weren\'t already a dog, hop down on all fours, with your hands underneath your pectorals. Now let your natural instincts take control, raising one leg out to the side as if to take care of business on the neighborhood firehydrant. Keep all other three points of contact station throughout this movement.',
         substitutes: ['froggy pumps']
     },
-    froggy_pumps: {
+    pumps: {
         type: 'accessory',
         meta: {
             environment: 'gym',
@@ -1236,10 +1236,10 @@ export const EXERCISES = {
         description: 'Lying flat on your back, drag your feet back towards your bum until your knees are bent at a 90 degree angle. With your feet still firm on the ground and touching, drop your knees to either side of your body. Now that you are in position, push down through the outsides of your feet so your bum and lower back lift off the ground. Pause while elevated, and then lower back down.',
         substitutes: ['cable kickbacks', 'fire hydrants']
     },
-    bad_girls: {
+    dopamine_hit: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: ['bands']
         },
@@ -1251,7 +1251,7 @@ export const EXERCISES = {
     seated_calf_raises: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: []
         },
@@ -1268,7 +1268,7 @@ export const EXERCISES = {
     standing_calf_raises: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: []
         },
@@ -1285,7 +1285,7 @@ export const EXERCISES = {
     walking_calf_raises: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: []
         },
@@ -1297,7 +1297,7 @@ export const EXERCISES = {
     unilateral_calf_raises: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: []
         },
@@ -1314,7 +1314,7 @@ export const EXERCISES = {
     monster_walks: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: ['band']
         },
@@ -1327,7 +1327,7 @@ export const EXERCISES = {
     dumbbell_curls: {
         type: 'compound',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: ['dumbbells', 'bands']
         },
@@ -1378,7 +1378,7 @@ export const EXERCISES = {
     rope_curls: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: ['bands']
         },
@@ -1390,7 +1390,7 @@ export const EXERCISES = {
     spider_curl: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: ['dumbbells']
         },
@@ -1407,7 +1407,7 @@ export const EXERCISES = {
     barbell_curls: {
         type: 'compound',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: ['barbell']
         },
@@ -1424,7 +1424,7 @@ export const EXERCISES = {
     drag_curls: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: ['barbell', 'dumbbells']
         },
@@ -1440,7 +1440,7 @@ export const EXERCISES = {
     unilateral_hammer_cable_curl: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: ['bands']
         },
@@ -1452,7 +1452,7 @@ export const EXERCISES = {
     preacher_curls: {
         type: 'compound',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: ['dumbbells', 'barbell']
         },
@@ -1469,7 +1469,7 @@ export const EXERCISES = {
     cable_bar_curls: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: ['bands']
         },
@@ -1481,7 +1481,7 @@ export const EXERCISES = {
     tricep_rope_pushdown: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: ['bands']
         },
@@ -1493,7 +1493,7 @@ export const EXERCISES = {
     tricep_bar_pushdown: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: ['bands']
         },
@@ -1505,7 +1505,7 @@ export const EXERCISES = {
     unilateral_cable_pushdown: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: ['bands']
         },
@@ -1522,7 +1522,7 @@ export const EXERCISES = {
     skull_crushers: {
         type: 'compound',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: ['barbell']
         },
@@ -1534,7 +1534,7 @@ export const EXERCISES = {
     face_press: {
         type: 'compound',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: []
         },
@@ -1546,7 +1546,7 @@ export const EXERCISES = {
     overhead_skull_crusher: {
         type: 'compound',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: ['barbell', 'dumbbell', 'bands']
         },
@@ -1558,7 +1558,7 @@ export const EXERCISES = {
     tricep_dip: {
         type: 'compound',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: []
         },
@@ -1570,7 +1570,7 @@ export const EXERCISES = {
     dumbbell_skull_crushers: {
         type: 'compound',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: ['dumbbells']
         },
@@ -1594,7 +1594,7 @@ export const EXERCISES = {
     unilateral_cable_push_aways: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: ['bands']
         },
@@ -1606,7 +1606,7 @@ export const EXERCISES = {
     jack_knives: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: []
         },
@@ -1618,7 +1618,7 @@ export const EXERCISES = {
     crunches: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: []
         },
@@ -1630,7 +1630,7 @@ export const EXERCISES = {
     l_sits: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: []
         },
@@ -1642,7 +1642,7 @@ export const EXERCISES = {
     russian_twists: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: []
         },
@@ -1654,7 +1654,7 @@ export const EXERCISES = {
     plank: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: []
         },
@@ -1666,7 +1666,7 @@ export const EXERCISES = {
     side_plank: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: []
         },
@@ -1678,7 +1678,7 @@ export const EXERCISES = {
     crunch_toes_touches: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: []
         },
@@ -1690,7 +1690,7 @@ export const EXERCISES = {
     dead_bugs: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: []
         },
@@ -1703,7 +1703,7 @@ export const EXERCISES = {
     lying_leg_lifts: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: []
         },
@@ -1715,7 +1715,7 @@ export const EXERCISES = {
     hanging_knee_raises: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: []
         },
@@ -1727,7 +1727,7 @@ export const EXERCISES = {
     mountain_climbers: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: []
         },
@@ -1739,7 +1739,7 @@ export const EXERCISES = {
     kneeling_cable_crunch: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: ['bands']
         },
@@ -1751,7 +1751,7 @@ export const EXERCISES = {
     bicycle_crunches: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: []
         },
@@ -1763,7 +1763,7 @@ export const EXERCISES = {
     banana_hold: {
         type: 'accessory',
         meta: {
-            environment: 'gymhome',
+            environment: 'home',
             level: [0, 1, 2],
             equipment: []
         },
