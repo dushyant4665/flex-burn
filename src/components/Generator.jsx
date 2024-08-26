@@ -48,44 +48,50 @@ export default function Generator({ muscles, setMuscles, poison, setPoison, goal
             </div>
 
             <Header index="02" title="Select Muscles" description="Choose the muscle groups you want to target." />
-            <div className="bg-slate-950 border border-slate-700 rounded-lg flex flex-col text-slate-100">
-                <button onClick={toggleModal} className="relative p-3 flex items-center justify-center hover:bg-slate-800 rounded-t-lg">
-                    <p className="capitalize">{muscles.length === 0 ? 'Select Muscle Groups' : muscles.join(', ')}</p>
-                    <i className="fa-solid absolute right-3 top-1/2 transform -translate-y-1/2 fa-caret-down"></i>
+<div className="bg-slate-950 border border-slate-800 rounded-lg flex flex-col text-slate-100 shadow-lg">
+    <button 
+        onClick={toggleModal} 
+        className="relative p-3 flex items-center justify-between hover:bg-blue-700 hover:text-white rounded-t-lg transition-all duration-300 ease-in-out transform hover:scale-100"
+    >
+        <p className="capitalize text-lg">{muscles.length === 0 ? 'Select Muscle Groups' : muscles.join(', ')}</p>
+        <i className="fa-solid fa-caret-down text-xl transform transition-transform duration-300 ease-in-out"></i>
+    </button>
+    {showModal && (
+        <div className="flex flex-col px-4 py-3 bg-slate-800 rounded-b-lg border-t border-slate-700">
+            {(poison === 'individual' ? WORKOUTS[poison] : Object.keys(WORKOUTS[poison])).map((muscleGroup, index) => (
+                <button
+                    key={index}
+                    onClick={() => updateMuscles(muscleGroup)}
+                    className={`py-2 hover:text-blue-500 hover:bg-slate-900 rounded-md duration-200 transition-colors ease-in-out text-left px-3 ${
+                        muscles.includes(muscleGroup) ? 'text-blue-500' : 'text-slate-300'
+                    }`}
+                >
+                    <p className="uppercase text-sm tracking-wide">{muscleGroup.replaceAll('_', ' ')}</p>
                 </button>
-                {showModal && (
-                    <div className="flex flex-col px-3 pb-3 bg-slate-800 rounded-b-lg">
-                        {(poison === 'individual' ? WORKOUTS[poison] : Object.keys(WORKOUTS[poison])).map((muscleGroup, index) => (
-                            <button
-                                key={index}
-                                onClick={() => updateMuscles(muscleGroup)}
-                                className={`hover:text-blue-500 duration-200 ${muscles.includes(muscleGroup) ? 'text-blue-500' : ''}`}
-                            >
-                                <p className="uppercase">{muscleGroup.replaceAll('_', ' ')}</p>
-                            </button>
-                        ))}
-                    </div>
-                )}
-            </div>
+            ))}
+        </div>
+    )}
+</div>
 
-            <Header index="03" title="Set Your Goal" description="Choose what you want to achieve." />
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                {Object.keys(SCHEMES).map((scheme, index) => (
-                    <button
-                        key={index}
-                        onClick={() => setGoal(scheme)}
-                        className={`bg-slate-950 border duration-300 ease-in-out px-4 py-3 rounded-lg transform transition-transform hover:scale-105 ${scheme === goal ? 'border-blue-500' : 'border-slate-700'} hover:border-blue-500`}
-                    >
-                        <p className="capitalize text-slate-100">{scheme.replaceAll('_', ' ')}</p>
-                    </button>
-                ))}
-            </div>
+<Header index="03" title="Set Your Goal" description="Choose what you want to achieve." />
+<div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+    {Object.keys(SCHEMES).map((scheme, index) => (
+        <button
+            key={index}
+            onClick={() => setGoal(scheme)}
+            className={`bg-slate-950 border-2 px-5 py-4 rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-105 
+            ${scheme === goal ? 'border-blue-500 shadow-blue-500/50 shadow-lg' : 'border-slate-700'} hover:border-blue-500`}
+        >
+            <p className="capitalize text-lg text-slate-100 tracking-wider">{scheme.replaceAll('_', ' ')}</p>
+        </button>
+    ))}
+</div>
 
-            <Button
-                func={updateWorkout}
-                text="Generate Workout"
-                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 mt-6"
-            />
-        </SectionWrapper>
+<Button
+    func={updateWorkout}
+    text="Generate Workout"
+    className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-xl shadow-lg transition-all transform hover:scale-105 mt-8"
+    />
+      </SectionWrapper>
     );
 }
