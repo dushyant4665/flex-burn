@@ -1,2 +1,2 @@
-# swoley-fit
- The ultimate gym training app built with react & tailwindCSS
+# fit
+ The ultimate gym training app built with react & tailwindCSS and additional firebase authentication
