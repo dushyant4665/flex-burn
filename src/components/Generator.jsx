@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
-import SectionWrapper from './SectionWrapper';
+  import SectionWrapper from './SectionWrapper';
 import { SCHEMES, WORKOUTS } from '../utils/swoldier';
-import Button from './Button';
+  import Button from './Button';
 
 function Header({ index, title, description }) {
     return (
         <div className="flex flex-col gap-2 text-center">
-            <div className="flex items-center justify-center gap-2">
-                <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-600 tracking-wider">{index}</p>
+           
+ <div className="flex items-center justify-center gap-2">
+               
+
+ <p className="text-3xl   sm:text-4xl md:text-5xl font-bold text-blue-600 tracking-wider">{index}</p>
                 <h4 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-slate-100">{title}</h4>
             </div>
             <p className="text-sm sm:text-base text-slate-300">{description}</p>
@@ -15,35 +18,39 @@ function Header({ index, title, description }) {
     );
 }
 
-export default function Generator({ muscles, setMuscles, poison, setPoison, goal, setGoal, updateWorkout }) {
+export default function Generator(
+{ muscles, setMuscles, poison, setPoison, goal, setGoal, updateWorkout }
+) {
     const [showModal, setShowModal] = useState(false);
 
-    const toggleModal = () => setShowModal(!showModal);
+    const toggleModal = () => setShowModal (!showModal);
 
     const updateMuscles = (muscleGroup) => {
         if (muscles.includes(muscleGroup)) {
-            setMuscles(muscles.filter(val => val !== muscleGroup));
+        setMuscles(muscles.filter(val => val !== muscleGroup));
         } else if (muscles.length < 3 || poison !== 'individual') {
-            setMuscles(poison !== 'individual' ? [muscleGroup] : [...muscles, muscleGroup]);
-            if (poison !== 'individual' || muscles.length === 2) setShowModal(false);
+        setMuscles(poison !== 'individual' ? [muscleGroup] : [...muscles, muscleGroup]);
+        if (poison !== 'individual' || muscles.length === 2) setShowModal(false);
         }
     };
 
     return (
+
         <SectionWrapper id="generate" header="Generate Your Workout" title={['It\'s', 'Never', 'Too Late']}>
             <Header index="01" title="Pick Your Workout" description="Choose the type of workout you want." />
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                 {Object.keys(WORKOUTS).map((type, index) => (
                     <button
-                        key={index}
+                 key={index}
                         onClick={() => {
                             setMuscles([]);
                             setPoison(type);
                         }}
-                        className={`bg-slate-950 border duration-300 ease-in-out px-4 py-3 rounded-lg transform transition-transform hover:scale-105 ${type === poison ? 'border-blue-500' : 'border-slate-700'} hover:border-blue-500`}
+
+                className={`bg-slate-950 border duration-300 ease-in-out px-4 py-3 rounded-lg transform transition-transform hover:scale-105 ${type === poison ? 'border-blue-500' : 'border-slate-700'} hover:border-blue-500`}
                     >
                         <p className="capitalize text-slate-100">{type.replaceAll('_', ' ')}</p>
-                    </button>
+             </button>
                 ))}
             </div>
 
@@ -56,7 +63,8 @@ export default function Generator({ muscles, setMuscles, poison, setPoison, goal
         <p className="capitalize text-lg">{muscles.length === 0 ? 'Select Muscle Groups' : muscles.join(', ')}</p>
         <i className="fa-solid fa-caret-down text-xl transform transition-transform duration-300 ease-in-out"></i>
     </button>
-    {showModal && (
+    
+{showModal && (
         <div className="flex flex-col px-4 py-3 bg-slate-800 rounded-b-lg border-t border-slate-700">
             {(poison === 'individual' ? WORKOUTS[poison] : Object.keys(WORKOUTS[poison])).map((muscleGroup, index) => (
                 <button
