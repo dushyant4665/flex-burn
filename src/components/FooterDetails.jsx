@@ -1,4 +1,4 @@
-// src/components/Footer.jsx
+
 import React from 'react';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 
@@ -8,12 +8,11 @@ const FooterDetails = () => {
     <footer className="bg-black text-white py-6 mt-80">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          {/* Logo and Brand */}
+
           <div className="mb-4 md:mb-0">
             <h1 className="text-2xl font-semibold">Flex Burn</h1>
           </div>
-          
-          {/* Links */}
+
           <div className="flex flex-col pb-4 justify-items-center md:flex-row space-y-4 md:space-y-0 md:space-x-8">
  
           <button
@@ -29,7 +28,7 @@ const FooterDetails = () => {
 
           </div>
           
-          {/* Social Media Icons */}
+  
           <div className="flex space-x-4">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
               <FaFacebookF size={20} />
